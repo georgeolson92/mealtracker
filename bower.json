@@ -1,0 +1,20 @@
+{
+  "name": "mealtracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "George <georgeolson92@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/georgeolson92/mealtracker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
