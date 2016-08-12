@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
     <br>
     <input [(ngModel)]='meal.name'>
     <input [(ngModel)]='meal.details'>
-    <input [(ngModel)]='meal.calories'>
+    <input [(ngModel)]='meal.calories' type="number">
   `
 })
 

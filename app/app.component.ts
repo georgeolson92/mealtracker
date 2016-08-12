@@ -14,12 +14,6 @@ import { MealListComponent } from './meal-list.component';
 export class AppComponent {
   public meals: Meal[];
   constructor(){
-      this.meals = [
-        new Meal("Bagel", "Mmmm bagel", 300),
-        new Meal("Chocolate", "oh you bite your friend like chocolate", 600)
-      ];
+      this.meals = [];
     }
-  mealWasSelected(clickedMeal: Meal): void {
-    console.log('meal', clickedMeal);
-  }
 }
