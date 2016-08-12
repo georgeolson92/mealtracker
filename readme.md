@@ -27,6 +27,7 @@ _Track meals you've eaten and calories consumed with this Angular 2 application.
 ## Setup/Installation Requirements
   * Use terminal to clone git repository to your computer.
   * Ensure you have Node.JS installed <a href="https://www.learnhowtoprogram.com/javascript/introduction-to-javascript/introducing-npm-and-gulp">(Guide to setting up)</a>
+  * Run "$ npm install typescript -g" in console to install TypeScript globally
   * Run "$ npm install" in console to ensure packages are installed
   * Run "$ bower install" in console to ensure front-end elements will be installed and functioning
   * Run "$ gulp build" in console to compile all components
