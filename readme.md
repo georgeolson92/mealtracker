@@ -4,7 +4,7 @@
 
 ## Description
 
-_Track meals you've eaten and calories consumed with this AngularJS 2 application._
+_Track meals you've eaten and calories consumed with this Angular 2 application._
 
 ## Specifications
 
@@ -25,7 +25,7 @@ _Track meals you've eaten and calories consumed with this AngularJS 2 applicatio
   * _Example Output: Bagel with cream cheese, Details: A warm, toasted bagel with tasty cream cheese on it, Calories: 300_
 
 ## Setup/Installation Requirements
-  * Use terminal to clone git repository to your computer._
+  * Use terminal to clone git repository to your computer.
   * Ensure you have Node.JS installed <a href="https://www.learnhowtoprogram.com/javascript/introduction-to-javascript/introducing-npm-and-gulp">(Guide to setting up)</a>
   * Run "$ npm install" in console to ensure packages are installed
   * Run "$ bower install" in console to ensure front-end elements will be installed and functioning
@@ -37,7 +37,7 @@ _Track meals you've eaten and calories consumed with this AngularJS 2 applicatio
  _No known bugs in the current version._
 
 ## Technologies Used
-_AngularJS 2, JavaScript, TypeScript, NodeJS, Bower, Gulp, Bootstrap, HTML_
+_Angular 2, JavaScript, TypeScript, NodeJS, Bower, Gulp, Bootstrap, HTML_
 
 ### License
 *Open GPL*
