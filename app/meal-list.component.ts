@@ -13,16 +13,26 @@ import { LowCaloriePipe } from './lowcalorie.pipe';
   pipes: [HighCaloriePipe, LowCaloriePipe],
   template: `
   <h2>Today's meals:</h2>
-  <meal-display *ngFor="#currentMeal of mealList"[meal]="currentMeal">
-  </meal-display>
+  <button (click)="displayAll()" class="btn btn-primary" [class.btn-success]="showAll">Display all meals</button>
+  <button (click)="displayHighCalorie()" class="btn btn-primary" [class.btn-success]="showHighCalorie">Display high calorie meals</button>
+  <button (click)="displayLowCalorie()" class="btn btn-primary" [class.btn-success]="showLowCalorie">Display low calorie meals</button>
 
-  <h3>High calorie meals:</h3>
-  <meal-display *ngFor="#currentMeal of mealList | highcalorie" [meal]="currentMeal">
-  </meal-display>
+  <div class="all-meals" *ngIf="showAll">
+    <meal-display *ngFor="#currentMeal of mealList"[meal]="currentMeal">
+    </meal-display>
+  </div>
 
-  <h3>Low calorie meals:</h3>
-  <meal-display *ngFor="#currentMeal of mealList | lowcalorie" [meal]="currentMeal">
-  </meal-display>
+  <div class="high-calorie-meals" *ngIf="showHighCalorie">
+    <h3>High calorie meals:</h3>
+    <meal-display *ngFor="#currentMeal of mealList | highcalorie" [meal]="currentMeal">
+    </meal-display>
+  </div>
+
+  <div class="low-calorie-meals" *ngIf="showLowCalorie">
+    <h3>Low calorie meals:</h3>
+    <meal-display *ngFor="#currentMeal of mealList | lowcalorie" [meal]="currentMeal">
+    </meal-display>
+  </div>
 
   <new-meal (onSubmitNewMeal)="addMeal($event)"></new-meal>`
 })
@@ -32,6 +42,10 @@ export class MealListComponent {
 
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
+
+  public showAll = true;
+  public showHighCalorie = false;
+  public showLowCalorie = false;
 
 
   constructor() {
@@ -45,5 +59,21 @@ export class MealListComponent {
   }
   addMeal(meal: Meal){
     this.mealList.push(meal);
+  }
+
+  displayHighCalorie(): void {
+    this.showHighCalorie = true;
+    this.showLowCalorie = false;
+    this.showAll = false;
+  }
+  displayLowCalorie(): void {
+    this.showHighCalorie = false;
+    this.showLowCalorie = true;
+    this.showAll = false;
+  }
+  displayAll(): void {
+    this.showHighCalorie = false;
+    this.showLowCalorie = false;
+    this.showAll = true;
   }
 }
