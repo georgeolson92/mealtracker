@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(){
       this.meals = [
         new Meal("Bagel", "Mmmm bagel", 300),
-        new Meal("Chocolate", "oh you bite your friend like chocolate", 200)
+        new Meal("Chocolate", "oh you bite your friend like chocolate", 600)
       ];
     }
   mealWasSelected(clickedMeal: Meal): void {
